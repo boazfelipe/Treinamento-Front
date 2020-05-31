@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio6</title>
+
+    <script>
+        function mudar() {
+
+            document.getElementById('texto').style.background = "#FFFF00"
+        }
+
+        function validar() {
+            caracter = document.getElementById('texto').value
+            Qtd_caracter = caracter.length
+            
+            if(Qtd_caracter < 3){
+                document.getElementById('texto').style.background = "#FF0000"
+             
+                
+
+            } else{
+                document.getElementById('texto').style.background = "#008000"
+            }
+
+
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Exercicio 6</h1>
+
+    <input type="text" placeholder="Digite aqui" id="texto" onfocus="mudar()" onblur="validar()">
+
+</body>
+</html>
+
+
+    

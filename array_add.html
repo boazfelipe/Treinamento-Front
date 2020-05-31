@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        lista_numero = [];
+        
+        
+
+        function add(){
+            
+            valor = document.getElementById('numero').value;
+                    document.getElementById('numero').value = ""           
+            
+            for(i=0; i<lista_numero[i];i++){
+
+                if(lista_numero[i] == valor){
+                alert('Esse numero ja existe')
+                return;
+          }    
+
+        }   lista_numero.push(valor); //Todo if dentro de for, o retorno contrario ao IF deve ser fora do FOR
+            console.log(lista_numero);
+          
+    }
+
+    
+                
+
+    </script>
+
+</head>
+<body>
+    <h1>Array inclusao</h1>
+
+    <input type="text" placeholder="Digite o numero" id="numero">
+    <button id="adicionar" onclick="add()">Adicionar</button>
+    <hr>    
+
+    <!--<span>Numeros salvos aqui</span>
+    <input type="text" id="salvos">-->
+
+
+
+</body>
+</html>

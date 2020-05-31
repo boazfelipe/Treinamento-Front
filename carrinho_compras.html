@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        objetos = []
+
+        function validar(){
+            obj = document.getElementById('caracter').value
+                  document.getElementById('caracter').value = ""
+
+            if(obj == ""){
+                    alert("Informe um valor valido")
+                    return;
+                }   
+                
+                for(i = 0; i < objetos.length; i++){
+
+                    if(objetos[i] == obj){ // objetos.indexOf(objeto) !== -1
+                    alert("Esse valor ja existe")
+                    return;
+                }
+
+            } objetos.push(obj);
+              console.log(objetos)  
+        }
+
+        function ordenar(){
+
+            objetos.sort()
+            console.log(objetos)
+        }
+    
+    </script>
+
+</head>
+<body>
+    
+    <h1>Carrinho de Compras</h1>
+    
+    <input type="text" id="caracter">
+
+    <button id="adicionar" onclick="validar()">Adicionar</button>
+    <button id="ordenar" onclick="ordenar()">Ordenar</button>
+</body>
+</html>

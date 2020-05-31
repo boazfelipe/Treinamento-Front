@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function Validar_Dados(){
+            Dado_Digitado = document.getElementById("Dado_Inserido").value
+            //Limpando campo anterior
+            document.getElementById("Dado_Inserido").value = ''
+
+            switch(Dado_Digitado){
+                case "0":
+                case "1":
+                case "2":
+                case "3":
+                case "4":
+                case "5":
+                case "6":
+                case "7":
+                case "8":
+                case "9":
+                document.getElementById('senha').value = Dado_Digitado
+                break
+                    default:
+                document.getElementById('login').value = Dado_Digitado
+          
+               
+            }         
+        }
+
+    </script>
+</head>
+<body>
+    <h1>Novo Exercicio</h1>
+
+    <input type="text" placeholder="Digite o login ou senha" id="Dado_Inserido">
+    <hr>
+
+    <span>Login</span>
+    <input type="text" id="login">
+
+    <span>Senha</span>
+    <input type="number" id="senha">
+
+    <button id="botao" onclick="Validar_Dados()">Enviar Dado Digitado</button>
+
+</body>
+</html>

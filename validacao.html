@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo Exercicio</title>
+
+    <script>
+
+        lista_segredos = [10, 20, 40, 50, 45];
+
+        function validar() {
+            n_digitado = document.getElementById('numero').value
+
+            for(i = 0; i < lista_segredos.length; i++){
+                
+                if( n_digitado == lista_segredos[i]){
+                    alert("Parabens, você acertou o " +lista_segredos[i]+ " numero");
+                    return;
+                                 
+                }                  
+                         
+            } alert("Você errou")
+          
+        }       
+
+
+    </script>
+
+</head>
+
+<body>
+    <h1>Fazendo validação com Array</h1>
+
+    <span>Numero do Usuario</span>
+    <input type="text" placeholder="Digite o numero aqui" id="numero">
+
+    <button id="Verificar" onclick="validar()">Verificar</button>
+
+</body>
+
+</html>

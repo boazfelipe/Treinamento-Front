@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios de Funções</title>
+
+    <script>
+        var num1 = parseInt(prompt('Digite o primeiro numero: '))
+        var num2 = parseInt(prompt('Digite o segundo numero: '))
+        var operacao = prompt('Selecione a operação: ')
+        var resultado = 0
+        
+
+
+        function calcular(){
+            
+
+            if(operacao == 'somar'){
+                resultado = num1 + num2
+                document.write('O resultado é: ' +resultado)
+
+            } else if(operacao=='subtrair'){
+                resultado = num1 - num2
+                document.write('O resultado é: ' +resultado)
+
+            }else{
+                document.write('Nenhuma opção valida')
+            }
+
+        }   
+
+        calcular();
+     
+    </script>
+
+
+</head>
+<body>
+    <h1>Funçoes e contas</h1>
+</body>
+</html>

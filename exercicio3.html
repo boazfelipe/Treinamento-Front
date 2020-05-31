@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio3</title>
+
+    <script>
+
+        function Salvar_texto(){
+         
+         Novo_Texto = document.getElementById('Texto_Digitado').value
+         //Limpando texto digitado anteriormente
+         document.getElementById('Texto_Digitado').value = ''
+         //Atribuindo a nova variavel o campo que foi capturado
+         document.getElementById('Texto_Salvo').value = Novo_Texto
+     
+           
+     }
+    
+        
+
+
+    </script>
+</head>
+<body>
+
+    <button onclick="Salvar_texto()">Salvar o Texto</button>
+    <hr>
+
+    <label for="Texto_Digitado">Digite Aqui</label>
+    <input type="text" id="Texto_Digitado">
+    
+    <label for="Texto_Salvo">Texto Salvo Aqui</label>
+    <input type="text" id="Texto_Salvo">
+
+    
+
+</body>
+</html>

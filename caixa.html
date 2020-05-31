@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="estilo.css"> 
+    <title>Document</title>
+    <script>
+        function Mudar(cor,l,a){
+
+          //Alterando parametros style de uma div  
+          document.getElementById('caixa').style.background = cor
+          document.getElementById('caixa').style.width = l
+          document.getElementById('caixa').style.height = a
+        }
+
+        function Alterar_Classe(){
+            document.getElementById('caixa').className = 'estilo2'
+
+        }
+
+    </script>
+</head>
+<body>
+
+    <div id="caixa" class="estilo1">
+   
+    </div>
+
+    <div>
+        <button id="vermelho" onclick="Mudar('#FF0000','200px','75px')">Vermelho</button>
+        <button id="verde" onclick="Mudar('#008000','100px','80px')">Verde</button>
+        <button id="amarelo"onclick="Mudar('#FFFF00','300px')">Amarelo</button>
+        
+        <button id="alterar" onclick="Alterar_Classe()">Alterar Classe</button>
+       
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,94 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+
+      <script>
+
+            //Sorteio de 60 numeros para um array
+            //for (var t = 0; numerosSorteados.length < 6; t++){        // gera o numero e guarda no array
+            //var sorteiaNumero  = Math.round(( Math.random()* 60));
+            //numerosSorteados.push(sorteiaNumero );
+    
+
+
+         const sorteados = [10,55,48,30,22,60]
+         const nao_Sorteados = []
+
+         function validar(){
+
+            
+
+               let max = 6;
+               if(nao_Sorteados.length < max){
+                    alert("Por favor, insira todos os numeros");
+                    return;
+                }
+                             
+                for (i = 0; i < nao_Sorteados.length; i++) {
+                 console.log(nao_Sorteados)
+                 for (x = 0; x < sorteados.length; x++) { //if(sorteio.indexOf(jogo[i]) > -1)
+                     console.log(sorteados)
+                     if (sorteados.toString() === nao_Sorteados.toString()) {  //(sorteados[0,1,2,3,4,5] == nao_Sorteados[0,1,2,3,4,5])
+                         alert("Parabéns, você acertou tudo");
+                         return;
+                     }
+
+                 }
+
+             } alert("Infelizmente você errou");
+                    
+         }
+
+         function adicionar(){
+             let max = 6;
+             escolhido = document.getElementById('array2').value
+                         document.getElementById('array2').value = ""
+
+                if(escolhido == ""){
+                    alert("Digite um valor valido");
+                    return;
+                }         
+
+                //o return para a execução da função caso a condição seja verdade, voltando para a anterior
+                for(let i=0;i<nao_Sorteados.length;i++){
+                    if(nao_Sorteados[i] == escolhido){
+                        alert("Esse numero ja foi escolhido");
+                        console.log(nao_Sorteados);
+                        return;
+                    }
+
+                } nao_Sorteados.push(escolhido);
+                  console.log(nao_Sorteados);
+
+
+                //Não necessario o return pois é a ultima condição do codigo
+                    if (nao_Sorteados.length > max) {
+                        alert("Você ja escolheu todos os numeros");
+                        nao_Sorteados.pop(escolhido);
+                        console.log(nao_Sorteados);
+                        
+                        
+            }
+             
+        }
+              
+    
+
+      </script>
+
+  </head>
+  <body>
+      <h1>Loteria</h1>
+        <span>Numeros sorteados</span><br>
+        <input type="text" id="array1">
+        
+        <input type="text" id="array2" placeholder="numeros da sorte">
+
+        <button type="text" id="adicionar" onclick="adicionar()">Adicionar</button><br>
+        <button id="comparar" onclick="validar()">Acertei?</button>
+
+  </body>
+  </html>

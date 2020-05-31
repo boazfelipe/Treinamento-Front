@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+
+    <script>
+        function dadosInseridos(){
+
+          caracter = document.getElementById('entrada').value
+         //Limpando o campo em que foi digitado o caracter
+         document.getElementById('entrada').value = ''
+        
+          
+      
+        if(caracter >= 0 || caracter <= 10){
+           document.getElementById('numeros').value = caracter
+        } else{
+
+        }   document.getElementById('letras').value = caracter
+
+    } 
+
+      
+    </script>
+    
+</head>
+
+<body>
+    
+    <input type="text" placeholder="Digite seu texto aqui" id="entrada" onkeyup="dadosInseridos()">
+    
+    <hr>
+
+   <spa>Letras</spa>
+   <input type="text" disabled='disabled' id="letras">
+
+   <spa>Numeros</spa>
+   <input type="text" disabled='disabled' id="numeros">
+   
+  
+</body>
+</html>
