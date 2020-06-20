@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud</title>
+
+    <script>
+
+       
+        //Pegar conteudo digitado
+        //Acionar evento para criar elemento
+        //Criar elemento no html
+        //var lista = document.createElement('li');
+        // lista = conteudo
+        
+        function criarTarefa(){
+        var lista_Tarefas = document.getElementById("lista_Geral");
+        var conteudo = document.getElementById("texto");        
+        console.log(conteudo);
+        
+        var lista = document.createElement("li");
+        
+        lista.textContent = conteudo.value;
+        lista_Tarefas.appendChild(lista);
+        lista.id = "tarefas";
+        conteudo.value = "";
+        conteudo.focus();            
+    }
+
+        function removerTarefa(){
+                                            
+               // btnR.onclick = function(){
+                document.getElementById("tarefas").remove();
+             
+               // }
+            
+
+            //document.getElementById("tarefas").remove();
+                
+
+        }
+
+            //Criando botão remover
+            //function novoBotao(){
+            //var btn = document.createElement("input");
+            //btn.type = 'button';
+            //btn.value = 'Remover';
+            //document.body.appendChild(btn);
+            //  console.log(btn);   
+            //}
+
+
+
+    </script>
+
+</head>
+<body>
+    
+    <input type="text" id="texto">
+
+    <input type="button" id="btn" value="Adicionar" onclick="criarTarefa()">
+    <input type="button" id="btnR" value="Remover" onclick="removerTarefa()">
+
+    <ul id="lista_Geral">
+
+    </ul>
+
+  
+</body>
+</html>
